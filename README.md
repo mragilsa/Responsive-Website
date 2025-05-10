@@ -39,7 +39,7 @@ A modern, fully responsive website built with React and styled using Tailwind CS
    ``` bash
    npm start  
 
-5. Once started, the app will be running and can be viewed in your browser
+5. Once started, the app will run locally and be accessible via your browser
 
 ---
 
