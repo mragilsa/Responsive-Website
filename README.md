@@ -33,9 +33,13 @@ A modern, fully responsive website built with React and styled using Tailwind CS
 
 3. Install dependencies:
    ``` bash
+   npm install
+
+4. Start the development server:
+   ``` bash
    npm start  
 
-4. The app should automatically open in your browser at: [http://localhost:3000](http://localhost:5173)  
+4. The app should automatically open in your browser
 
 ---
 
