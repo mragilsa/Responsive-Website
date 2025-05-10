@@ -2,13 +2,14 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { RiMenu4Line, RiCloseFill } from "react-icons/ri";
 import MobileNavbar from "./MobileNavbar";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
     <>
-      {isMenuOpen && <MobileNavbar setIsMenuOpen={setIsMenuOpen} />}
+      {isMenuOpen && <MobileNavbar isOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       <div className="bg-background sticky top-0 z-10">
         <nav className="max-w-screen-xl mx-auto py-4 px-6">
           <div className="flex items-center justify-between">
@@ -16,16 +17,19 @@ const Navbar = () => {
 
             <ul className="hidden md:flex md:gap-14">
               <li>
-                <a className="menu-item">Home</a>
+                <Link to="hero" smooth spy offset={-80} className="menu-item">Home</Link>
               </li>
+
               <li>
-                <a className="menu-item">Service</a>
+                <Link to="services" smooth spy offset={-80} className="menu-item">Services</Link>
               </li>
+
               <li>
-                <a className="menu-item">Our Work</a>
+                <Link to="our-work" smooth spy offset={-80} className="menu-item">Our Work</Link>
               </li>
+
               <li>
-                <a className="menu-item">Testimonials</a>
+                <Link to="testimonials" smooth spy offset={-80} className="menu-item">Testimonials</Link>
               </li>
             </ul>
 

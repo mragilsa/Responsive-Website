@@ -1,7 +1,13 @@
 import React from "react";
 import logo from "../assets/logo.png";
 
-const MobileNavbar = ({ setIsMenuOpen }) => {
+const MobileNavbar = ({ isOpen, setIsMenuOpen }) => {
+
+  const handleScroll = (sectionId) => {
+    if(isOpen) setIsMenuOpen(false);
+    document.getElementById(sectionId).scrollIntoView({behavior: "smooth"});
+  };
+
   return (
     <div className="w-screen fixed top-0 z-20">
       <div className="w-1/2 h-screen flex flex-col p-8 bg-background">
@@ -9,16 +15,16 @@ const MobileNavbar = ({ setIsMenuOpen }) => {
 
         <ul>
           <li className="mb-5">
-            <a className="menu-item">Home</a>
+            <a className="menu-item" onClick={() => handleScroll('hero')}>Home</a>
           </li>
           <li className="mb-5">
-            <a className="menu-item">Service</a>
+            <a className="menu-item" onClick={() => handleScroll('services')}>Service</a>
           </li>
           <li className="mb-5">
-            <a className="menu-item">Our Work</a>
+            <a className="menu-item" onClick={() => handleScroll('our-work')}>Our Work</a>
           </li>
           <li className="mb-5">
-            <a className="menu-item">Testimonials</a>
+            <a className="menu-item" onClick={() => handleScroll('testimonials')}>Testimonials</a>
           </li>
         </ul>
 
